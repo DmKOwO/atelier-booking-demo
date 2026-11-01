@@ -1,0 +1,2272 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+.spin {
+  animation: booking-spin 1s linear infinite;
+}
+@keyframes booking-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.booking-modal {
+  max-width: 1040px;
+}
+.booking-modal .modal-close {
+  top: 20px;
+  right: 21px;
+}
+.reservation {
+  padding: 34px 35px 0;
+}
+.reservation-head {
+  outline: none;
+  padding-right: 40px;
+  scroll-margin-top: 25px;
+}
+.reservation-head h2 {
+  font-size: 38px;
+  line-height: 1.1;
+  margin-top: 14px;
+  letter-spacing: -0.06em;
+}
+.reservation-head > p {
+  font-size: 12px;
+  line-height: 1.75;
+  color: var(--muted);
+  margin-top: 13px;
+}
+.reservation-head .eyebrow {
+  font-size: 8px;
+  color: var(--blue);
+}
+.reservation-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 27px;
+  border-bottom: 1px solid var(--line);
+}
+.reservation-steps > button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 47px;
+  font-size: 10px;
+  padding-bottom: 13px;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  text-align: left;
+  color: var(--muted);
+}
+.reservation-steps > button > span {
+  width: 23px;
+  height: 23px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 8px;
+  flex-shrink: 0;
+}
+.reservation-steps > button.current {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+.reservation-steps > button.current > span,
+.reservation-steps > button.complete > span {
+  background: var(--blue);
+  color: white;
+  border-color: var(--blue);
+}
+.reservation-steps > button:disabled {
+  opacity: 1;
+}
+.reservation-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 33px;
+  padding-top: 27px;
+  padding-bottom: 30px;
+}
+.reservation-main {
+  min-width: 0;
+}
+.reservation .booking-audience {
+  width: 100%;
+  margin-bottom: 17px;
+}
+.reservation .booking-audience > button {
+  flex: 1;
+  justify-content: center;
+  font-size: 11px;
+}
+.service-options {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.service-option {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  padding: 18px 15px;
+  gap: 12px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+.service-option.selected {
+  border-color: var(--blue);
+  background: #f0f2fc;
+}
+.service-option > input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  min-height: 0;
+  padding: 0;
+  left: 16px;
+  top: 20px;
+}
+.service-option:has(input:focus-visible) {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+.service-option-check {
+  height: 19px;
+  width: 19px;
+  border: 1px solid #b4b8aa;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  margin-top: 2px;
+}
+.selected > .service-option-check {
+  border-color: var(--blue);
+  background: var(--blue);
+  color: white;
+}
+.service-option-copy {
+  min-width: 0;
+  flex: 1;
+}
+.service-option-copy > strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+.service-option-copy > small {
+  display: block;
+  font-size: 9px;
+  line-height: 1.65;
+  color: var(--muted);
+  margin-top: 5px;
+}
+.service-option-copy > span {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 9px;
+  color: var(--muted);
+  margin-top: 10px;
+}
+.service-option-price {
+  font-size: 11px;
+  white-space: nowrap;
+  margin-top: 3px;
+}
+.reservation-help {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 23px;
+  color: var(--muted);
+}
+.reservation-help > svg {
+  color: var(--blue);
+  margin-top: 2px;
+}
+.reservation-help > p {
+  font-size: 10px;
+  line-height: 1.8;
+}
+.reservation-summary {
+  align-self: start;
+  position: sticky;
+  top: 20px;
+  background: var(--paper);
+  border: 1px solid #e3e2d8;
+  border-radius: 11px;
+  overflow: hidden;
+}
+.reservation-summary-image {
+  height: 170px;
+  position: relative;
+  background: #dad6cb;
+}
+.reservation-summary-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 24%;
+}
+.reservation-summary-image > span {
+  position: absolute;
+  bottom: 12px;
+  left: 13px;
+  right: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  background: var(--paper-light);
+  font-size: 7px;
+  letter-spacing: 0.1em;
+}
+.reservation-summary-body {
+  padding: 23px 20px 19px;
+}
+.reservation-summary-body > .eyebrow {
+  font-size: 7px;
+  color: var(--muted);
+}
+.reservation-summary-body > h3 {
+  font-size: 22px;
+  font-weight: 450;
+  letter-spacing: -0.045em;
+  margin-top: 10px;
+  line-height: 1.2;
+}
+.summary-fact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 17px;
+}
+.summary-fact + .summary-fact {
+  margin-top: 11px;
+}
+.summary-date {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  padding-block: 17px;
+  border-block: 1px solid var(--line);
+  color: var(--muted);
+}
+.summary-date strong {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+}
+.summary-date span {
+  display: block;
+  font-size: 9px;
+  margin-top: 6px;
+}
+.summary-date > svg:last-child:not(:first-child) {
+  margin-left: auto;
+  color: var(--blue);
+}
+.summary-date.has-date {
+  color: var(--blue);
+}
+.summary-inspo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 17px;
+}
+.summary-inspo > div {
+  display: flex;
+  padding-left: 4px;
+}
+.summary-inspo img {
+  width: 29px;
+  height: 35px;
+  object-fit: cover;
+  border: 2px solid var(--paper);
+  margin-left: -4px;
+  border-radius: 4px;
+}
+.summary-inspo > span {
+  font-size: 9px;
+  color: var(--muted);
+}
+.summary-inspo > svg {
+  margin-left: auto;
+  color: var(--blue);
+}
+.summary-price {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 24px;
+}
+.summary-price > span {
+  font-size: 9px;
+  color: var(--muted);
+  padding-bottom: 3px;
+}
+.summary-price > strong {
+  font-size: 24px;
+  font-weight: 450;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+}
+.summary-price-note {
+  font-size: 8px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-top: 11px;
+}
+.picker-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 16px;
+}
+.picker-section-title > h3 {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+.picker-section-title > span {
+  font-size: 8px;
+  color: var(--muted);
+}
+.picker-section-title > div {
+  display: flex;
+  gap: 3px;
+}
+.picker-section-title .icon-button {
+  height: 30px;
+  width: 30px;
+}
+.booking-master-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+}
+.booking-master-grid:has(> button:nth-child(4)) {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.booking-master-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 9px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  text-align: center;
+  min-width: 0;
+}
+.booking-master-card.selected {
+  border-color: var(--blue);
+  background: #f0f2fc;
+}
+.booking-master-card > img {
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+.booking-master-card > strong {
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.booking-master-card > small {
+  font-size: 8px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.any-master-icon {
+  width: 56px;
+  height: 56px;
+  background: #e8e9e0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--blue);
+}
+.master-selected {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  display: grid;
+  place-items: center;
+  height: 17px;
+  width: 17px;
+  background: var(--blue);
+  border: 2px solid var(--paper-light);
+  color: white;
+  border-radius: 50%;
+}
+.date-picker-title {
+  margin-top: 27px;
+  margin-bottom: 3px;
+}
+.calendar-month {
+  display: block;
+  font-size: 9px;
+  color: var(--muted);
+  text-transform: capitalize;
+  margin-bottom: 12px;
+}
+.booking-days {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+}
+.booking-days > button {
+  padding: 10px 3px 9px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-height: 81px;
+}
+.booking-days > button > span {
+  font-size: 9px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.booking-days strong {
+  font-size: 20px;
+  font-weight: 450;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+.booking-days small {
+  font-size: 7px;
+  color: var(--muted);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.booking-days > button.selected {
+  color: white;
+  background: var(--blue);
+  border-color: var(--blue);
+}
+.booking-days > button.selected > span,
+.booking-days > button.selected > small {
+  color: #edf0ff;
+}
+.booking-days > button:disabled {
+  opacity: 0.4;
+  background: #efeee8;
+}
+.times-title {
+  margin-top: 25px;
+  margin-bottom: 17px;
+}
+.times-title > h3 {
+  font-size: 12px;
+}
+.availability-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  min-height: 160px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.availability-loading > .spin {
+  color: var(--blue);
+}
+.booking-time-groups {
+  transition: opacity 0.2s;
+}
+.booking-time-groups.is-loading {
+  opacity: 0.45;
+  pointer-events: none;
+}
+.booking-time-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 13px;
+}
+.booking-time-group > span {
+  font-size: 8px;
+  color: var(--muted);
+  width: 33px;
+  padding-top: 12px;
+  flex-shrink: 0;
+}
+.booking-time-group > div {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 7px;
+  flex: 1;
+}
+.booking-time-group > div > button {
+  border: 1px solid var(--line);
+  min-height: 36px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+.booking-time-group > div > button.selected {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: white;
+}
+.booking-time-group > div > button:not(.selected):hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+.availability-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 23px;
+  color: var(--muted);
+}
+.availability-note > span {
+  font-size: 8px;
+  line-height: 1.8;
+}
+.availability-note > svg {
+  margin-top: 2px;
+}
+.auto-master-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: #eef1fc;
+  border-radius: 6px;
+  color: var(--blue);
+  padding: 12px;
+  font-size: 10px;
+  line-height: 1.7;
+  margin-top: 15px;
+}
+.auto-master-note > svg {
+  margin-top: 2px;
+}
+.empty-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  padding: 35px 20px;
+  text-align: center;
+}
+.empty-time > svg {
+  color: var(--blue);
+}
+.empty-time > strong {
+  font-size: 15px;
+  font-weight: 500;
+}
+.empty-time > p {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.empty-time > .text-button {
+  font-size: 10px;
+  margin-top: 8px;
+}
+.reservation-error {
+  border: 1px solid #dbc2b7;
+  color: #873c28;
+  background: #fcf0e9;
+  border-radius: 6px;
+  padding: 14px 15px;
+  font-size: 11px;
+  line-height: 1.8;
+  margin-bottom: 19px;
+}
+.reservation-error > button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 10px;
+  margin-top: 8px;
+  text-decoration: underline;
+}
+.reservation-footer {
+  position: sticky;
+  z-index: 3;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: var(--paper-light);
+  border-top: 1px solid var(--line);
+  padding-block: 19px;
+}
+.reservation-footer > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.reservation-footer > .button {
+  min-width: 230px;
+}
+.reservation-footer-note {
+  font-size: 10px;
+  color: var(--muted);
+}
+.reservation-footer .text-button {
+  font-size: 11px;
+}
+.reservation-mobile-price {
+  display: none;
+}
+.selected-appointment {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #eef1fc;
+  padding: 17px;
+  border-radius: 7px;
+  margin-bottom: 24px;
+  color: var(--blue);
+}
+.selected-appointment > div {
+  flex: 1;
+}
+.selected-appointment strong {
+  font-size: 12px;
+  font-weight: 500;
+  display: block;
+}
+.selected-appointment span {
+  font-size: 9px;
+  display: block;
+  margin-top: 6px;
+  line-height: 1.6;
+}
+.selected-appointment > button {
+  font-size: 9px;
+  text-decoration: underline;
+}
+.reservation-contact-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.reservation-contact label {
+  font-size: 10px;
+}
+.reservation-contact input,
+.reservation-contact textarea {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  min-height: 47px;
+  background: transparent;
+  font-size: 13px;
+}
+.reservation-note-label {
+  display: block;
+  margin-top: 21px;
+}
+.reservation-note-label > span {
+  font-size: 8px;
+  color: var(--muted);
+  margin-left: 5px;
+}
+.reservation-contact textarea {
+  font-size: 12px;
+  line-height: 1.8;
+}
+.booking-inspiration {
+  margin-top: 25px;
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+.booking-inspiration .picker-section-title {
+  margin-bottom: 14px;
+}
+.booking-inspiration h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.booking-inspiration h3 > span {
+  font-size: 8px;
+  font-weight: 400;
+  color: var(--muted);
+}
+.booking-inspiration .text-button {
+  font-size: 9px;
+}
+.booking-inspiration > p {
+  font-size: 9px;
+  line-height: 1.8;
+  color: var(--muted);
+  margin-top: 13px;
+}
+.inspiration-thumbnails {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+.inspiration-thumbnails > button {
+  position: relative;
+  width: 58px;
+  height: 72px;
+}
+.inspiration-thumbnails img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.inspiration-thumbnails > button > span {
+  position: absolute;
+  right: -4px;
+  top: -4px;
+  width: 19px;
+  height: 19px;
+  background: var(--paper-light);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.inspiration-chooser {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px 8px;
+  margin-top: 20px;
+}
+.inspiration-chooser > button {
+  position: relative;
+  text-align: left;
+  min-width: 0;
+}
+.inspiration-chooser img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 0.8;
+  object-fit: cover;
+  border: 2px solid transparent;
+  border-radius: 4px;
+}
+.inspiration-chooser > button[aria-pressed="true"] img {
+  border-color: var(--blue);
+}
+.inspiration-chooser > button > span {
+  font-size: 8px;
+  line-height: 1.5;
+  display: block;
+  margin-top: 4px;
+}
+.inspiration-chooser i {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background: var(--blue);
+  color: white;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.reservation-contact-note {
+  font-size: 9px;
+  line-height: 1.9;
+  color: var(--muted);
+  margin-top: 23px;
+}
+.reservation-success {
+  padding: 44px 45px;
+  text-align: center;
+  max-width: 650px;
+  margin: auto;
+}
+.reservation-success > .eyebrow {
+  font-size: 8px;
+  display: block;
+  margin-top: 21px;
+  color: var(--blue);
+}
+.success-mark {
+  height: 65px;
+  width: 65px;
+  border: 1px solid #bdc8ff;
+  background: #e8edff;
+  color: var(--blue);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-inline: auto;
+}
+.reservation-success > h2 {
+  font-size: 44px;
+  margin-top: 16px;
+}
+.reservation-success > p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.85;
+  margin-top: 17px;
+}
+.appointment-ticket {
+  text-align: left;
+  background: var(--paper);
+  border: 1px solid #deded2;
+  border-radius: 15px;
+  padding: 24px;
+  margin-top: 26px;
+}
+.ticket-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.ticket-label {
+  font-size: 8px;
+  letter-spacing: 0.1em;
+}
+.booking-status {
+  font-size: 8px;
+  background: #e2ecdb;
+  color: #385b2b;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.ticket-date {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 15px;
+  padding-block: 22px;
+  border-bottom: 1px dashed #c9cbbb;
+}
+.ticket-date > strong {
+  font-size: 28px;
+  font-weight: 450;
+  letter-spacing: -0.05em;
+}
+.ticket-date > span {
+  font-size: 29px;
+  line-height: 1.3;
+  letter-spacing: -0.05em;
+}
+.ticket-date small {
+  display: block;
+  text-align: right;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0;
+  margin-top: 2px;
+}
+.ticket-master {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-block: 18px;
+}
+.ticket-master > img {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+.ticket-master > div {
+  flex: 1;
+}
+.ticket-master strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+}
+.ticket-master div > span {
+  display: block;
+  font-size: 10px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.ticket-master > span {
+  font-size: 10px;
+  white-space: nowrap;
+  color: var(--muted);
+}
+.ticket-inspo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid var(--line);
+  padding-block: 15px;
+}
+.ticket-inspo > div {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  max-width: 60%;
+}
+.ticket-inspo img {
+  width: 31px;
+  height: 38px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+.ticket-inspo > span {
+  font-size: 9px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.ticket-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  border-top: 1px solid var(--line);
+  padding-block: 19px;
+}
+.ticket-price > span {
+  font-size: 11px;
+  color: var(--muted);
+}
+.ticket-price strong {
+  font-size: 27px;
+  font-weight: 450;
+  letter-spacing: -0.04em;
+}
+.ticket-code {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 8px;
+  border-top: 1px dashed #c9cbbb;
+  padding-top: 15px;
+  color: var(--muted);
+}
+.reservation-success > p.reservation-demo-note {
+  font-size: 9px;
+  line-height: 1.8;
+  max-width: 440px;
+  margin: 20px auto 0;
+}
+.success-actions {
+  display: flex;
+  gap: 11px;
+  justify-content: center;
+  margin-top: 24px;
+}
+.success-actions > .button {
+  font-size: 11px;
+  gap: 15px;
+}
+.reservation-success > p.fine-print {
+  font-size: 9px;
+  margin-top: 18px;
+}
+.appointments-modal {
+  max-width: 660px;
+}
+.appointments-panel {
+  padding: 43px;
+}
+.appointments-panel > h2 {
+  font-size: 48px;
+  margin-top: 18px;
+}
+.appointments-panel > .body-muted {
+  font-size: 12px;
+  margin-top: 20px;
+}
+.appointments-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-block: 27px 17px;
+  font-size: 10px;
+  color: var(--muted);
+}
+.appointments-toolbar > .text-button {
+  font-size: 10px;
+}
+.appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 23px;
+}
+.appointment-card {
+  padding: 21px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: var(--paper);
+}
+.appointment-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 8px;
+  color: var(--muted);
+}
+.appointment-card-date {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 18px;
+  border-bottom: 1px dashed var(--line);
+  padding-bottom: 17px;
+}
+.appointment-card-date > strong {
+  font-size: 24px;
+  font-weight: 450;
+  letter-spacing: -0.04em;
+}
+.appointment-card-date > span {
+  font-size: 24px;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+}
+.appointment-card-date small {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0;
+}
+.appointment-card.cancelled {
+  opacity: 0.75;
+}
+.booking-status.cancelled {
+  color: var(--muted);
+  background: #e3e3dc;
+}
+.appointment-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border-top: 1px solid var(--line);
+  padding-top: 15px;
+}
+.appointment-card-actions > .text-button {
+  font-size: 9px;
+  min-height: 27px;
+}
+.cancel-visit-button {
+  color: #8b4731;
+}
+.cancel-confirmation {
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  margin-top: 15px;
+}
+.cancel-confirmation > p {
+  font-size: 11px;
+  line-height: 1.8;
+}
+.cancel-confirmation > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 16px;
+}
+.cancel-confirmation .text-button {
+  font-size: 10px;
+}
+.cancel-confirmation .button {
+  font-size: 10px;
+  min-height: 40px;
+  padding-inline: 17px;
+}
+.appointments-panel > .fine-print {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  font-size: 9px;
+}
+.appointments-panel > .fine-print > svg {
+  margin-top: 2px;
+}
+.look-discovery {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 23px;
+}
+.look-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 310px;
+  flex: 1;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+}
+.look-search > input {
+  border: 0;
+  padding: 12px 0;
+  font-size: 12px;
+  min-height: 44px;
+  background: transparent;
+}
+.look-kind-filters {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.look-kind-filters > button {
+  font-size: 10px;
+  min-height: 36px;
+  border-radius: 25px;
+  padding: 8px 13px;
+  border: 1px solid var(--line);
+}
+.look-kind-filters > button.active {
+  color: var(--blue);
+  border-color: var(--blue);
+}
+.master-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  transition: transform 0.5s;
+}
+.master-visual:hover .master-photo {
+  transform: scale(1.03);
+}
+.master-monogram > small {
+  background: var(--paper-light);
+  color: var(--ink);
+  padding: 6px 8px;
+  border-radius: 2px;
+}
+.header-actions {
+  gap: 17px;
+}
+.header-appointments {
+  width: 35px;
+  flex-shrink: 0;
+}
+@media (max-width: 900px) {
+  .reservation {
+    padding-inline: 27px;
+  }
+  .reservation-layout {
+    grid-template-columns: minmax(0, 1fr) 245px;
+    gap: 23px;
+  }
+  .reservation-summary-body {
+    padding: 20px 16px;
+  }
+  .reservation-head h2 {
+    font-size: 34px;
+  }
+  .reservation-steps > button {
+    font-size: 9px;
+  }
+  .service-option {
+    padding: 15px 12px;
+    gap: 9px;
+  }
+  .service-option-copy > strong {
+    font-size: 12px;
+  }
+  .service-option-price {
+    font-size: 10px;
+  }
+  .booking-master-card {
+    padding-inline: 6px;
+  }
+  .booking-master-card > strong {
+    font-size: 10px;
+  }
+  .booking-master-card > small {
+    font-size: 7px;
+  }
+  .booking-time-group > div {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .header-actions {
+    gap: 12px;
+  }
+  .desktop-nav {
+    gap: 17px;
+  }
+}
+@media (max-width: 700px) {
+  .booking-modal {
+    max-height: 96dvh;
+    border-radius: 15px 15px 0 0;
+  }
+  .booking-modal .modal-close {
+    top: 17px;
+    right: 16px;
+  }
+  .reservation {
+    padding: 29px 20px 0;
+  }
+  .reservation-head {
+    padding-right: 30px;
+    scroll-margin-top: 25px;
+  }
+  .reservation-head > .eyebrow {
+    font-size: 7px;
+  }
+  .reservation-head h2 {
+    font-size: 30px;
+    margin-top: 15px;
+    max-width: 300px;
+    line-height: 1.12;
+  }
+  .reservation-head > p {
+    font-size: 11px;
+    line-height: 1.75;
+    margin-top: 13px;
+  }
+  .reservation-steps {
+    gap: 10px;
+    margin-top: 22px;
+  }
+  .reservation-steps > button {
+    font-size: 9px;
+    gap: 6px;
+    padding-bottom: 13px;
+    min-height: 45px;
+    white-space: nowrap;
+  }
+  .reservation-steps > button > span {
+    height: 21px;
+    width: 21px;
+    font-size: 7px;
+  }
+  .reservation-layout {
+    display: block;
+    padding-top: 22px;
+    padding-bottom: 24px;
+  }
+  .reservation-summary {
+    display: none;
+  }
+  .reservation .booking-audience {
+    margin-bottom: 17px;
+  }
+  .reservation .booking-audience > button {
+    font-size: 11px;
+    padding: 12px 7px;
+  }
+  .service-option {
+    padding: 18px 13px;
+    gap: 10px;
+  }
+  .service-option-copy > strong {
+    font-size: 13px;
+  }
+  .service-option-copy > small {
+    font-size: 10px;
+    line-height: 1.65;
+  }
+  .service-option-copy > span {
+    font-size: 9px;
+    margin-top: 11px;
+  }
+  .service-option-price {
+    font-size: 11px;
+    margin-top: 3px;
+  }
+  .service-option-check {
+    width: 18px;
+    height: 18px;
+  }
+  .reservation-help > p {
+    font-size: 10px;
+  }
+  .reservation-help {
+    gap: 12px;
+    margin-top: 22px;
+  }
+  .reservation-footer {
+    padding-top: 15px;
+    padding-bottom: calc(16px + env(safe-area-inset-bottom));
+    gap: 14px;
+  }
+  .reservation-footer > .button {
+    min-width: 0;
+    min-height: 49px;
+    padding-inline: 19px;
+    font-size: 11px;
+    gap: 17px;
+    flex: 1;
+    max-width: 245px;
+  }
+  .reservation-footer > div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    min-width: 68px;
+  }
+  .reservation-footer .text-button {
+    font-size: 10px;
+    gap: 7px;
+  }
+  .reservation-mobile-price {
+    display: block;
+    font-size: 12px;
+    letter-spacing: -0.02em;
+  }
+  .reservation-footer-note {
+    font-size: 8px;
+    max-width: 80px;
+    line-height: 1.7;
+  }
+  .picker-section-title {
+    gap: 10px;
+  }
+  .picker-section-title > h3 {
+    font-size: 13px;
+  }
+  .picker-section-title > span {
+    font-size: 7px;
+    max-width: 110px;
+    text-align: right;
+    line-height: 1.6;
+  }
+  .booking-master-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7px;
+  }
+  .booking-master-card {
+    padding: 14px 5px 13px;
+    gap: 8px;
+  }
+  .booking-master-card > img,
+  .any-master-icon {
+    width: 51px;
+    height: 51px;
+  }
+  .booking-master-card > strong {
+    font-size: 10px;
+    line-height: 1.4;
+  }
+  .booking-master-card > small {
+    font-size: 8px;
+    line-height: 1.5;
+  }
+  .master-selected {
+    right: 6px;
+    top: 7px;
+    width: 16px;
+    height: 16px;
+  }
+  .date-picker-title {
+    margin-top: 25px;
+  }
+  .calendar-month {
+    font-size: 9px;
+  }
+  .booking-days {
+    gap: 5px;
+  }
+  .booking-days > button {
+    min-height: 77px;
+    padding: 10px 2px;
+    gap: 8px;
+  }
+  .booking-days > button > span {
+    font-size: 8px;
+  }
+  .booking-days strong {
+    font-size: 19px;
+  }
+  .booking-days small {
+    font-size: 6px;
+  }
+  .times-title {
+    margin-top: 23px;
+  }
+  .times-title > h3 {
+    font-size: 12px;
+  }
+  .booking-time-group {
+    gap: 10px;
+    margin-top: 15px;
+  }
+  .booking-time-group > span {
+    width: 29px;
+    font-size: 8px;
+    padding-top: 13px;
+  }
+  .booking-time-group > div {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+  }
+  .booking-time-group > div > button {
+    min-height: 39px;
+    font-size: 10px;
+  }
+  .availability-note > span {
+    font-size: 8px;
+  }
+  .auto-master-note {
+    font-size: 10px;
+  }
+  .reservation-error {
+    font-size: 10px;
+    padding: 13px;
+  }
+  .selected-appointment {
+    padding: 15px 13px;
+    gap: 10px;
+    margin-bottom: 21px;
+  }
+  .selected-appointment strong {
+    font-size: 12px;
+  }
+  .selected-appointment span {
+    font-size: 9px;
+  }
+  .selected-appointment > button {
+    font-size: 9px;
+  }
+  .reservation-contact-fields {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .reservation-contact label {
+    font-size: 11px;
+  }
+  .reservation-contact input,
+  .reservation-contact textarea {
+    font-size: 16px;
+    min-height: 49px;
+    padding: 13px 12px;
+    margin-top: 8px;
+  }
+  .reservation-contact textarea {
+    line-height: 1.7;
+  }
+  .reservation-note-label {
+    margin-top: 20px;
+  }
+  .reservation-note-label > span {
+    font-size: 9px;
+  }
+  .booking-inspiration {
+    margin-top: 24px;
+    padding-top: 20px;
+  }
+  .booking-inspiration .picker-section-title > h3 {
+    font-size: 12px;
+  }
+  .booking-inspiration .text-button {
+    font-size: 9px;
+    gap: 5px;
+  }
+  .booking-inspiration > p {
+    font-size: 9px;
+  }
+  .inspiration-chooser {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px 7px;
+  }
+  .inspiration-chooser > button > span {
+    font-size: 7px;
+  }
+  .reservation-contact-note {
+    font-size: 9px;
+    line-height: 1.85;
+  }
+  .reservation-success {
+    padding: 46px 22px 25px;
+  }
+  .success-mark {
+    height: 59px;
+    width: 59px;
+  }
+  .reservation-success > .eyebrow {
+    font-size: 7px;
+    margin-top: 19px;
+  }
+  .reservation-success > h2 {
+    font-size: 37px;
+    margin-top: 14px;
+  }
+  .reservation-success > p {
+    font-size: 11px;
+    line-height: 1.85;
+    margin-top: 17px;
+  }
+  .appointment-ticket {
+    padding: 20px 18px;
+    margin-top: 24px;
+    border-radius: 15px;
+  }
+  .ticket-label {
+    font-size: 7px;
+  }
+  .booking-status {
+    font-size: 7px;
+    padding: 6px 7px;
+  }
+  .ticket-date {
+    padding-block: 23px;
+    gap: 12px;
+  }
+  .ticket-date > strong {
+    font-size: 26px;
+  }
+  .ticket-date > span {
+    font-size: 28px;
+  }
+  .ticket-master {
+    gap: 10px;
+    padding-block: 19px;
+  }
+  .ticket-master strong {
+    font-size: 12px;
+  }
+  .ticket-master div > span {
+    font-size: 9px;
+  }
+  .ticket-master > span {
+    font-size: 9px;
+  }
+  .ticket-master > img {
+    width: 40px;
+    height: 40px;
+  }
+  .ticket-inspo {
+    gap: 9px;
+    padding-block: 14px;
+  }
+  .ticket-inspo > span {
+    font-size: 8px;
+  }
+  .ticket-code {
+    font-size: 7px;
+    gap: 12px;
+  }
+  .ticket-price > span {
+    font-size: 10px;
+  }
+  .ticket-price strong {
+    font-size: 26px;
+  }
+  .reservation-success > p.reservation-demo-note {
+    font-size: 9px;
+    margin-top: 18px;
+  }
+  .success-actions {
+    gap: 9px;
+    flex-wrap: wrap;
+    margin-top: 22px;
+  }
+  .success-actions > .button {
+    font-size: 10px;
+    min-height: 47px;
+    gap: 11px;
+    padding-inline: 18px;
+    flex: 1;
+    white-space: nowrap;
+  }
+  .reservation-success > p.fine-print {
+    font-size: 8px;
+    margin-top: 17px;
+  }
+  .appointments-panel {
+    padding: 45px 22px 26px;
+  }
+  .appointments-panel > h2 {
+    font-size: 43px;
+  }
+  .appointments-panel > .body-muted {
+    font-size: 11px;
+    line-height: 1.85;
+  }
+  .appointments-toolbar {
+    font-size: 9px;
+    margin-top: 25px;
+  }
+  .appointments-toolbar > .text-button {
+    font-size: 9px;
+  }
+  .appointment-card {
+    padding: 18px 16px;
+    border-radius: 10px;
+  }
+  .appointment-card-top {
+    font-size: 7px;
+  }
+  .appointment-card-date > strong {
+    font-size: 23px;
+  }
+  .appointment-card-date > span {
+    font-size: 22px;
+  }
+  .appointment-card-date small {
+    font-size: 9px;
+    display: block;
+    text-align: right;
+    margin-top: 3px;
+  }
+  .appointment-card-date {
+    margin-top: 17px;
+    padding-bottom: 17px;
+  }
+  .appointment-card .ticket-master > span {
+    font-size: 9px;
+  }
+  .appointment-card-actions > .text-button {
+    font-size: 9px;
+    gap: 6px;
+  }
+  .cancel-confirmation > p {
+    font-size: 10px;
+  }
+  .cancel-confirmation > div {
+    gap: 12px;
+  }
+  .cancel-confirmation .text-button {
+    font-size: 9px;
+  }
+  .cancel-confirmation .button {
+    font-size: 9px;
+    padding-inline: 14px;
+  }
+  .appointments-panel > .fine-print {
+    font-size: 8px;
+  }
+  .look-discovery {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 13px;
+    margin-bottom: 21px;
+  }
+  .look-search {
+    max-width: none;
+    flex: none;
+  }
+  .look-search > input {
+    font-size: 16px;
+    min-height: 45px;
+    padding-block: 11px;
+  }
+  .look-search > input::placeholder {
+    font-size: 11px;
+  }
+  .look-kind-filters {
+    gap: 7px;
+    justify-content: space-between;
+  }
+  .look-kind-filters > button {
+    min-height: 34px;
+    font-size: 9px;
+    padding: 7px 12px;
+    flex: 1;
+    white-space: nowrap;
+  }
+  .header-actions {
+    gap: 13px;
+  }
+  .header-appointments {
+    width: 29px;
+  }
+  .master-monogram > small {
+    font-size: 5px;
+    padding: 5px;
+  }
+  .mobile-dock {
+    gap: 8px;
+    padding-inline: 16px;
+  }
+  .mobile-dock > button {
+    min-width: 39px;
+    font-size: 7px;
+  }
+  .mobile-dock > .dock-book {
+    min-width: 0;
+    flex: 1;
+    max-width: 151px;
+    gap: 12px;
+    padding-inline: 19px;
+    font-size: 10px;
+  }
+  .mobile-dock svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media (max-width: 360px) {
+  .reservation {
+    padding-inline: 16px;
+  }
+  .reservation-head h2 {
+    font-size: 27px;
+  }
+  .reservation-steps {
+    gap: 7px;
+  }
+  .reservation-steps > button {
+    font-size: 8px;
+    gap: 5px;
+  }
+  .reservation-steps > button > span {
+    width: 19px;
+    height: 19px;
+  }
+  .service-option-price {
+    font-size: 10px;
+  }
+  .service-option-copy > strong {
+    font-size: 12px;
+  }
+  .service-option-copy > small {
+    font-size: 9px;
+  }
+  .booking-master-card > strong {
+    font-size: 9px;
+  }
+  .booking-master-card > small {
+    font-size: 7px;
+  }
+  .booking-master-card > img,
+  .any-master-icon {
+    height: 46px;
+    width: 46px;
+  }
+  .booking-time-group > div {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .booking-days {
+    gap: 4px;
+  }
+  .booking-days small {
+    font-size: 6px;
+  }
+  .booking-days strong {
+    font-size: 18px;
+  }
+  .reservation-footer > .button {
+    font-size: 10px;
+    gap: 10px;
+    padding-inline: 15px;
+  }
+  .look-kind-filters > button {
+    font-size: 8px;
+    padding-inline: 9px;
+  }
+  .header-actions {
+    gap: 8px;
+  }
+  .mobile-dock > .dock-book {
+    padding-inline: 15px;
+    gap: 8px;
+    font-size: 9px;
+  }
+  .mobile-dock {
+    padding-inline: 13px;
+    gap: 6px;
+  }
+  .mobile-dock > button {
+    min-width: 37px;
+  }
+  .appointment-card .ticket-master > span {
+    font-size: 8px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spin {
+    animation: none;
+  }
+}
+
+/* ==========================================================================
+   Receipt Ticket Component Styles (Inspired by Bolduevva design reference)
+   ========================================================================== */
+.receipt-ticket-wrapper {
+  margin: 20px auto 0;
+  max-width: 440px;
+  width: 100%;
+  animation: receiptUnroll 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes receiptUnroll {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.receipt-ticket {
+  position: relative;
+  background: #faf9f5;
+  color: #1e241c;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  margin-top: 18px;
+}
+
+.receipt-washi-tape {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1.5deg);
+  width: 96px;
+  height: 26px;
+  background: rgba(244, 114, 182, 0.82);
+  box-shadow: 0 2px 6px rgba(244, 114, 182, 0.25);
+  z-index: 10;
+  clip-path: polygon(3% 0%, 97% 2%, 100% 95%, 98% 100%, 2% 98%, 0% 5%);
+}
+
+.receipt-tear-top,
+.receipt-tear-bottom {
+  display: block;
+  width: 100%;
+  height: 14px;
+  line-height: 0;
+}
+
+.receipt-tear-top svg,
+.receipt-tear-bottom svg {
+  display: block;
+  width: 100%;
+  height: 14px;
+}
+
+.receipt-tear-top {
+  margin-top: -1px;
+}
+
+.receipt-tear-bottom {
+  margin-bottom: -1px;
+}
+
+.receipt-body {
+  padding: 10px 26px 16px;
+}
+
+.receipt-header {
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+.receipt-title {
+  font-family: inherit;
+  font-size: 34px;
+  font-weight: 850;
+  letter-spacing: -1.5px;
+  margin: 0;
+  color: #1a2018;
+  line-height: 1;
+}
+
+.receipt-meta-pixel {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: monospace, ui-monospace, sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: #4c5448;
+}
+
+.receipt-meta-pixel strong {
+  font-weight: 700;
+  font-size: 11px;
+  color: #1a2018;
+  letter-spacing: 0.06em;
+}
+
+.receipt-branch-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #edece4;
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 10px;
+  color: #3f473b;
+  margin-top: 10px;
+}
+
+.receipt-dots-divider {
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #9ea597;
+  text-align: center;
+  margin: 10px 0;
+  user-select: none;
+}
+
+.receipt-items {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 6px 0;
+}
+
+.receipt-item-row {
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  align-items: flex-start;
+  gap: 10px;
+  text-align: left;
+}
+
+.receipt-item-num {
+  font-family: monospace, ui-monospace;
+  font-size: 18px;
+  font-weight: 700;
+  color: #8c9484;
+  line-height: 1.1;
+}
+
+.receipt-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.receipt-pixel-label {
+  font-family: monospace, ui-monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #1e241c;
+  line-height: 1.25;
+}
+
+.receipt-item-sub {
+  font-size: 11px;
+  color: #5d6657;
+  line-height: 1.4;
+}
+
+.receipt-item-price {
+  font-family: monospace, ui-monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1e241c;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.receipt-item-price.status-ok {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  color: #245c43;
+  background: #e6f0e6;
+  padding: 3px 7px;
+  border-radius: 4px;
+}
+
+.receipt-time-badge {
+  background: #1e241c;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.client-status {
+  font-size: 10px;
+  color: #5d6657;
+}
+
+.receipt-fold-crease {
+  width: calc(100% + 52px);
+  margin: 14px -26px;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 4px,
+    rgba(0, 0, 0, 0.12) 4px,
+    rgba(0, 0, 0, 0.12) 8px
+  );
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.receipt-inspo-attached {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #f1f0e9;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.receipt-inspo-label {
+  font-size: 10px;
+  color: #5d6657;
+}
+
+.receipt-inspo-thumbs {
+  display: flex;
+  gap: 6px;
+}
+
+.receipt-inspo-thumbs img {
+  border-radius: 4px;
+  object-fit: cover;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.receipt-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 10px 0 14px;
+  border-bottom: 1px dashed #c0c6b8;
+}
+
+.receipt-total-label strong {
+  font-size: 28px;
+  font-weight: 850;
+  letter-spacing: -1px;
+  color: #1a2018;
+}
+
+.receipt-total-amount {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.receipt-total-amount strong {
+  font-size: 24px;
+  font-family: monospace, ui-monospace;
+  font-weight: 800;
+  color: #1a2018;
+}
+
+.receipt-total-amount small {
+  font-size: 10px;
+  color: #6a7364;
+  margin-top: 2px;
+}
+
+.receipt-barcode-section {
+  text-align: center;
+  padding: 16px 10px 10px;
+}
+
+.receipt-barcode-svg {
+  width: 100%;
+  max-width: 280px;
+  height: 48px;
+  margin: 0 auto;
+  display: block;
+}
+
+.receipt-barcode-code {
+  font-family: monospace, ui-monospace;
+  font-size: 12px;
+  letter-spacing: 0.35em;
+  font-weight: 700;
+  color: #1e241c;
+  margin-top: 6px;
+  text-align: center;
+}
+
+.receipt-footer-sub {
+  font-size: 8px;
+  letter-spacing: 0.18em;
+  color: #7b8374;
+  margin-top: 4px;
+}
+
+.receipt-details-toggle {
+  margin-top: 14px;
+  border-top: 1px solid #e7e6dc;
+  padding-top: 12px;
+}
+
+.receipt-accordion-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border: none;
+  font-size: 11px;
+  font-weight: 600;
+  color: #245c43;
+  cursor: pointer;
+  padding: 6px 0;
+}
+
+.receipt-details-content {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: #f1f0e9;
+  border-radius: 6px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #3b4236;
+}
+
+.receipt-detail-item strong {
+  display: block;
+  font-size: 11px;
+  color: #1e241c;
+  margin-bottom: 2px;
+}
+
+.receipt-detail-item p {
+  margin: 0;
+  font-size: 11px;
+  color: #555e4e;
+}
+
+.receipt-map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #245c43;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-top: 4px;
+}
+
+/* Actions below receipt */
+.receipt-actions-panel {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.receipt-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.receipt-btn-wa {
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+}
+
+.receipt-btn-wa:hover {
+  background: #20bd5a;
+  transform: translateY(-1px);
+}
+
+.receipt-btn-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.receipt-btn-outline {
+  background: #fff;
+  color: #245c43;
+  border: 1px solid #c2ccbc;
+  font-size: 11px;
+  padding: 10px 8px;
+}
+
+.receipt-btn-outline:hover {
+  background: #f4f7f2;
+  border-color: #245c43;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .receipt-ticket,
+  .receipt-ticket * {
+    visibility: visible;
+  }
+  .receipt-ticket {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+  }
+  .receipt-actions-panel,
+  .receipt-washi-tape {
+    display: none !important;
+  }
+}

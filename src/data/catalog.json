@@ -1,0 +1,632 @@
+{
+  "studio": {
+    "name": "Ателье",
+    "city": "Демонстрация",
+    "tagline": "Бьюти-пространство вашего стиля",
+    "demo": true,
+    "whatsapp": null,
+    "address": "Адрес в демоверсии не указан",
+    "mapsUrl": null,
+    "instagramUrl": null,
+    "hours": "Ежедневно 09:00 — 20:00",
+    "timezone": "Asia/Qostanay",
+    "bookingHorizonDays": 28,
+    "leadMinutes": 60,
+    "slotIntervalMinutes": 15,
+    "bufferMinutes": 15,
+    "subdomain": "",
+    "platformUrl": "",
+    "phone": "Контакты отключены в демоверсии"
+  },
+  "audiences": [
+    {
+      "id": "all",
+      "label": "Все образы"
+    },
+    {
+      "id": "women",
+      "label": "Волосы"
+    },
+    {
+      "id": "nails",
+      "label": "Ногти"
+    },
+    {
+      "id": "care",
+      "label": "Брови и ресницы"
+    }
+  ],
+  "masters": [
+    {
+      "id": "alina",
+      "name": "Алина",
+      "initials": "АЛ",
+      "role": "Топ-стилист колорист",
+      "description": "Эксперт сложных техник окрашивания (Airtouch, Balayage, Шатуш), стрижек по английским техникам и SPA-восстановления волос.",
+      "tags": [
+        "Airtouch",
+        "Стрижки",
+        "Окрашивание",
+        "SPA"
+      ],
+      "color": "blue",
+      "number": "01",
+      "image": "long-hair",
+      "serviceIds": [
+        "women-cut",
+        "wash-blowdry-shape",
+        "hair-polish",
+        "men-cut",
+        "color-complex",
+        "spa-cold-short"
+      ],
+      "schedule": [
+        {
+          "weekday": 0,
+          "enabled": true,
+          "start": "09:00",
+          "end": "20:00",
+          "breakStart": "14:00",
+          "breakEnd": "14:30"
+        },
+        {
+          "weekday": 1,
+          "enabled": true,
+          "start": "09:00",
+          "end": "20:00",
+          "breakStart": "14:00",
+          "breakEnd": "14:30"
+        },
+        {
+          "weekday": 2,
+          "enabled": true,
+          "start": "09:00",
+          "end": "20:00",
+          "breakStart": "14:00",
+          "breakEnd": "14:30"
+        },
+        {
+          "weekday": 3,
+          "enabled": true,
+          "start": "09:00",
+          "end": "20:00",
+          "breakStart": "14:00",
+          "breakEnd": "14:30"
+        },
+        {
+          "weekday": 4,
+          "enabled": true,
+          "start": "09:00",
+          "end": "20:00",
+          "breakStart": "14:00",
+          "breakEnd": "14:30"
+        },
+        {
+          "weekday": 5,
+          "enabled": true,
+          "start": "09:00",
+          "end": "20:00",
+          "breakStart": "14:00",
+          "breakEnd": "14:30"
+        },
+        {
+          "weekday": 6,
+          "enabled": true,
+          "start": "09:00",
+          "end": "20:00",
+          "breakStart": "14:00",
+          "breakEnd": "14:30"
+        }
+      ],
+      "branchIds": [
+        "satpaeva"
+      ],
+      "demo": false
+    },
+    {
+      "id": "kamila",
+      "name": "Камила",
+      "initials": "КМ",
+      "role": "Nail-эксперт",
+      "description": "Мастер эстетического комбинированного и аппаратного маникюра, укрепления гелем и Smart-педикюра.",
+      "tags": [
+        "Маникюр",
+        "Smart-педикюр",
+        "Укрепление"
+      ],
+      "color": "blue",
+      "number": "02",
+      "image": "nails-editorial",
+      "serviceIds": [
+        "mani-all-inclusive",
+        "hardware-manicure-no-cover",
+        "pedi-smart-all-inclusive"
+      ],
+      "schedule": [
+        {
+          "weekday": 0,
+          "enabled": true,
+          "start": "09:00",
+          "end": "20:00",
+          "breakStart": "14:00",
+          "breakEnd": "14:30"
+        },
+        {
+          "weekday": 1,
+          "enabled": true,
+          "start": "09:00",
+          "end": "20:00",
+          "breakStart": "14:00",
+          "breakEnd": "14:30"
+        },
+        {
+          "weekday": 2,
+          "enabled": true,
+          "start": "09:00",
+          "end": "20:00",
+          "breakStart": "14:00",
+          "breakEnd": "14:30"
+        },
+        {
+          "weekday": 3,
+          "enabled": true,
+          "start": "09:00",
+          "end": "20:00",
+          "breakStart": "14:00",
+          "breakEnd": "14:30"
+        },
+        {
+          "weekday": 4,
+          "enabled": true,
+          "start": "09:00",
+          "end": "20:00",
+          "breakStart": "14:00",
+          "breakEnd": "14:30"
+        },
+        {
+          "weekday": 5,
+          "enabled": true,
+          "start": "09:00",
+          "end": "20:00",
+          "breakStart": "14:00",
+          "breakEnd": "14:30"
+        },
+        {
+          "weekday": 6,
+          "enabled": true,
+          "start": "09:00",
+          "end": "20:00",
+          "breakStart": "14:00",
+          "breakEnd": "14:30"
+        }
+      ],
+      "branchIds": [
+        "satpaeva"
+      ],
+      "demo": false
+    },
+    {
+      "id": "diana",
+      "name": "Диана",
+      "initials": "ДН",
+      "role": "Мастер взгляда и бровей",
+      "description": "Моделирование архитектуры бровей, долговременная укладка, окрашивание хной и кератиновый лифтинг ресниц.",
+      "tags": [
+        "Брови",
+        "Ресницы",
+        "Ламинирование"
+      ],
+      "color": "blue",
+      "number": "03",
+      "image": "brows-editorial",
+      "serviceIds": [
+        "brow-henna",
+        "lash-lami",
+        "brow-lami"
+      ],
+      "schedule": [
+        {
+          "weekday": 0,
+          "enabled": true,
+          "start": "09:00",
+          "end": "20:00",
+          "breakStart": "14:00",
+          "breakEnd": "14:30"
+        },
+        {
+          "weekday": 1,
+          "enabled": true,
+          "start": "09:00",
+          "end": "20:00",
+          "breakStart": "14:00",
+          "breakEnd": "14:30"
+        },
+        {
+          "weekday": 2,
+          "enabled": true,
+          "start": "09:00",
+          "end": "20:00",
+          "breakStart": "14:00",
+          "breakEnd": "14:30"
+        },
+        {
+          "weekday": 3,
+          "enabled": true,
+          "start": "09:00",
+          "end": "20:00",
+          "breakStart": "14:00",
+          "breakEnd": "14:30"
+        },
+        {
+          "weekday": 4,
+          "enabled": true,
+          "start": "09:00",
+          "end": "20:00",
+          "breakStart": "14:00",
+          "breakEnd": "14:30"
+        },
+        {
+          "weekday": 5,
+          "enabled": true,
+          "start": "09:00",
+          "end": "20:00",
+          "breakStart": "14:00",
+          "breakEnd": "14:30"
+        },
+        {
+          "weekday": 6,
+          "enabled": true,
+          "start": "09:00",
+          "end": "20:00",
+          "breakStart": "14:00",
+          "breakEnd": "14:30"
+        }
+      ],
+      "branchIds": [
+        "satpaeva"
+      ],
+      "demo": false
+    }
+  ],
+  "looks": [
+    {
+      "id": "deesse-color-v2",
+      "title": "Тёплая глубина",
+      "subtitle": "Каштановая основа и мягкие медные блики.",
+      "image": "deesse-color-v2",
+      "serviceId": "color-complex",
+      "audience": "women",
+      "kind": "color",
+      "masterId": "alina",
+      "tags": [
+        "Волосы"
+      ],
+      "description": "Тёплая глубина — авторская концепция Ателье Beauty Bar. Индивидуальная работа с вашим природным образом.",
+      "care": "Мастер порекомендует премиальный домашний уход.",
+      "position": "50% 42%",
+      "source": "portfolio"
+    },
+    {
+      "id": "soft-bob",
+      "title": "Мягкий боб",
+      "subtitle": "Чистый срез и подвижная форма.",
+      "image": "woman",
+      "serviceId": "women-cut",
+      "audience": "women",
+      "kind": "cut",
+      "masterId": "alina",
+      "tags": [
+        "Волосы"
+      ],
+      "description": "Мягкий боб — авторская концепция Ателье Beauty Bar. Индивидуальная работа с вашим природным образом.",
+      "care": "Мастер порекомендует премиальный домашний уход.",
+      "position": "50% 35%",
+      "source": "portfolio"
+    },
+    {
+      "id": "long-silk",
+      "title": "Гладкая длина",
+      "subtitle": "Блеск и ровный силуэт.",
+      "image": "long-hair",
+      "serviceId": "women-cut",
+      "audience": "women",
+      "kind": "cut",
+      "masterId": "alina",
+      "tags": [
+        "Волосы"
+      ],
+      "description": "Гладкая длина — авторская концепция Ателье Beauty Bar. Индивидуальная работа с вашим природным образом.",
+      "care": "Мастер порекомендует премиальный домашний уход.",
+      "position": "50% 35%",
+      "source": "portfolio"
+    },
+    {
+      "id": "evening-wave",
+      "title": "Мягкий балаяж",
+      "subtitle": "Переходы оттенка и светлые пряди.",
+      "image": "balayage",
+      "serviceId": "color-complex",
+      "audience": "women",
+      "kind": "color",
+      "masterId": "alina",
+      "tags": [
+        "Волосы"
+      ],
+      "description": "Мягкий балаяж — авторская концепция Ателье Beauty Bar. Индивидуальная работа с вашим природным образом.",
+      "care": "Мастер порекомендует премиальный домашний уход.",
+      "position": "50% 35%",
+      "source": "portfolio"
+    },
+    {
+      "id": "pixie",
+      "title": "Текстурная пикси",
+      "subtitle": "Короткая длина с характером.",
+      "image": "pixie",
+      "serviceId": "women-cut",
+      "audience": "women",
+      "kind": "cut",
+      "masterId": "alina",
+      "tags": [
+        "Волосы"
+      ],
+      "description": "Текстурная пикси — авторская концепция Ателье Beauty Bar. Индивидуальная работа с вашим природным образом.",
+      "care": "Мастер порекомендует премиальный домашний уход.",
+      "position": "50% 35%",
+      "source": "portfolio"
+    },
+    {
+      "id": "updo",
+      "title": "Собранный силуэт",
+      "subtitle": "Вечерняя укладка и открытая линия шеи.",
+      "image": "hair-updo-editorial",
+      "serviceId": "wash-blowdry-shape",
+      "audience": "women",
+      "kind": "cut",
+      "masterId": "alina",
+      "tags": [
+        "Волосы"
+      ],
+      "description": "Собранный силуэт — авторская концепция Ателье Beauty Bar. Индивидуальная работа с вашим природным образом.",
+      "care": "Мастер порекомендует премиальный домашний уход.",
+      "position": "50% 35%",
+      "source": "portfolio"
+    },
+    {
+      "id": "natural-nails",
+      "title": "Натуральный нюд",
+      "subtitle": "Сдержанный оттенок и чистая форма.",
+      "image": "nails-editorial",
+      "serviceId": "mani-all-inclusive",
+      "audience": "nails",
+      "kind": "nails",
+      "masterId": "kamila",
+      "tags": [
+        "Ногти"
+      ],
+      "description": "Натуральный нюд — авторская концепция Ателье Beauty Bar. Индивидуальная работа с вашим природным образом.",
+      "care": "Мастер порекомендует премиальный домашний уход.",
+      "position": "50% 35%",
+      "source": "portfolio"
+    },
+    {
+      "id": "nail-art",
+      "title": "Графичный акцент",
+      "subtitle": "Дизайн как небольшая деталь образа.",
+      "image": "nails-leopard",
+      "serviceId": "mani-all-inclusive",
+      "audience": "nails",
+      "kind": "nails",
+      "masterId": "kamila",
+      "tags": [
+        "Ногти"
+      ],
+      "description": "Графичный акцент — авторская концепция Ателье Beauty Bar. Индивидуальная работа с вашим природным образом.",
+      "care": "Мастер порекомендует премиальный домашний уход.",
+      "position": "50% 35%",
+      "source": "portfolio"
+    },
+    {
+      "id": "brow-shape",
+      "title": "Естественные брови",
+      "subtitle": "Мягкая линия и выразительный взгляд.",
+      "image": "brows-editorial",
+      "serviceId": "brow-henna",
+      "audience": "care",
+      "kind": "care",
+      "masterId": "diana",
+      "tags": [
+        "Брови"
+      ],
+      "description": "Естественные брови — авторская концепция Ателье Beauty Bar. Индивидуальная работа с вашим природным образом.",
+      "care": "Мастер порекомендует премиальный домашний уход.",
+      "position": "50% 35%",
+      "source": "portfolio"
+    }
+  ],
+  "services": [
+    {
+      "id": "women-cut",
+      "audience": "women",
+      "name": "Женская стрижка",
+      "detail": "Персональная консультация, мытье головы, модельная стрижка и укладка на брашинг.",
+      "duration": "60 мин",
+      "durationMinutes": 60,
+      "price": 6000,
+      "from": false,
+      "priceOnRequest": false
+    },
+    {
+      "id": "wash-blowdry-shape",
+      "audience": "women",
+      "name": "Укладка волос",
+      "detail": "Дневная или вечерняя укладка стайлером/брашингом с фиксацией объема.",
+      "duration": "60 мин",
+      "durationMinutes": 60,
+      "price": 5000,
+      "from": false,
+      "priceOnRequest": false
+    },
+    {
+      "id": "hair-polish",
+      "audience": "women",
+      "name": "Полировка волос",
+      "detail": "Удаление секущихся кончиков по полотну без потери общей длины.",
+      "duration": "60 мин",
+      "durationMinutes": 60,
+      "price": 6000,
+      "from": false,
+      "priceOnRequest": false
+    },
+    {
+      "id": "men-cut",
+      "audience": "men",
+      "name": "Мужская стрижка",
+      "detail": "Мужская модельная стрижка с мытьем и укладкой.",
+      "duration": "45 мин",
+      "durationMinutes": 45,
+      "price": 4000,
+      "from": false,
+      "priceOnRequest": false
+    },
+    {
+      "id": "color-complex",
+      "audience": "women",
+      "name": "Сложное окрашивание",
+      "detail": "Airtouch, Balayage или Шатуш с защитой связей волоса и тонированием в благородный оттенок.",
+      "duration": "180 мин",
+      "durationMinutes": 180,
+      "price": 25000,
+      "from": true,
+      "priceOnRequest": false
+    },
+    {
+      "id": "spa-cold-short",
+      "audience": "women",
+      "name": "SPA-уход для кожи головы и волос",
+      "detail": "Глубокое восстановление гидролипидного баланса, питание и зеркальный блеск.",
+      "duration": "60 мин",
+      "durationMinutes": 60,
+      "price": 8000,
+      "from": false,
+      "priceOnRequest": false
+    },
+    {
+      "id": "mani-all-inclusive",
+      "audience": "nails",
+      "name": "Маникюр с покрытием",
+      "detail": "Снятие, комбинированный маникюр, выравнивание и покрытие гель-лаком.",
+      "duration": "90 мин",
+      "durationMinutes": 90,
+      "price": 6000,
+      "from": false,
+      "priceOnRequest": false
+    },
+    {
+      "id": "hardware-manicure-no-cover",
+      "audience": "nails",
+      "name": "Маникюр без покрытия",
+      "detail": "Гигиеническая чистая обработка пальчиков и уходовое питательное масло.",
+      "duration": "45 мин",
+      "durationMinutes": 45,
+      "price": 4500,
+      "from": false,
+      "priceOnRequest": false
+    },
+    {
+      "id": "pedi-smart-all-inclusive",
+      "audience": "nails",
+      "name": "Педикюр Smart",
+      "detail": "Дисковая Smart-обработка стопы и пальчиков с покрытием гель-лак.",
+      "duration": "90 мин",
+      "durationMinutes": 90,
+      "price": 8500,
+      "from": false,
+      "priceOnRequest": false
+    },
+    {
+      "id": "brow-henna",
+      "audience": "care",
+      "name": "Коррекция и окрашивание бровей хной",
+      "detail": "Подбор идеальной геометрии бровей, коррекция и окрашивание стойкой хной.",
+      "duration": "45 мин",
+      "durationMinutes": 45,
+      "price": 4500,
+      "from": false,
+      "priceOnRequest": false
+    },
+    {
+      "id": "lash-lami",
+      "audience": "care",
+      "name": "Ламинирование ресниц",
+      "detail": "Эффект распахнутого взгляда, красивый изгиб и насыщение кератином.",
+      "duration": "60 мин",
+      "durationMinutes": 60,
+      "price": 7500,
+      "from": false,
+      "priceOnRequest": false
+    },
+    {
+      "id": "brow-lami",
+      "audience": "care",
+      "name": "Ламинирование бровей",
+      "detail": "Фиксация правильной формы волосков и стойкое тонирование.",
+      "duration": "45 мин",
+      "durationMinutes": 45,
+      "price": 7000,
+      "from": false,
+      "priceOnRequest": false
+    }
+  ],
+  "branches": [
+    {
+      "id": "satpaeva",
+      "name": "Основное пространство",
+      "address": "Демонстрационный филиал",
+      "phone": "",
+      "map": "https://2gis.kz/pavlodar/firm/70000001057047175",
+      "mapsUrl": ""
+    }
+  ],
+  "specialOffers": [],
+  "reviews": [],
+  "serviceGroups": [
+    {
+      "id": "hair",
+      "title": "Волосы",
+      "subtitle": "Форма, движение и укладка.",
+      "image": "long-hair",
+      "serviceIds": [
+        "women-cut",
+        "wash-blowdry-shape",
+        "hair-polish",
+        "men-cut",
+        "color-complex"
+      ],
+      "audience": "women"
+    },
+    {
+      "id": "nails",
+      "title": "Ногти",
+      "subtitle": "Ухоженные руки. Ваша деталь.",
+      "image": "nails-editorial",
+      "serviceIds": [
+        "mani-all-inclusive",
+        "hardware-manicure-no-cover",
+        "pedi-smart-all-inclusive"
+      ],
+      "audience": "nails"
+    },
+    {
+      "id": "brows",
+      "title": "Брови и ресницы",
+      "subtitle": "Взгляд без лишних усилий.",
+      "image": "brows-editorial",
+      "serviceIds": [
+        "brow-henna",
+        "lash-lami",
+        "brow-lami"
+      ],
+      "audience": "care"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+node_modules/
+bundle/
+atelier-demo.html
+atelier-demo.zip
+*.log
+.DS_Store

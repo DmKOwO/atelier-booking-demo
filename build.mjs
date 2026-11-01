@@ -1,0 +1,11 @@
+import {build} from 'vite';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+const root=path.dirname(new URL(import.meta.url).pathname);
+await build({root,configFile:false,define:{"process.env.NODE_ENV":JSON.stringify("production")},oxc:{jsx:{runtime:'automatic'}},build:{lib:{entry:path.join(root,'src/entry.tsx'),name:'AtelierDemo',formats:['iife'],fileName:()=> 'app.js'},outDir:'bundle',minify:true,rollupOptions:{output:{inlineDynamicImports:true}}}});
+const js=await fs.readFile(path.join(root,'bundle/app.js'),'utf8');
+const css=await fs.readFile(path.join(root,'inline.css'),'utf8');
+const assets=await fs.readFile(path.join(root,'embedded-assets.json'),'utf8');
+const html=`<!doctype html><html lang="ru" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Портфолио: адаптивный сайт сферы услуг с локальной записью и панелью управления"><title>Ателье — демонстрация сайта и записи</title><style>${css}</style></head><body class="hm-body"><div id="root"></div><script>window.DEMO_ASSETS=${assets};</script><script>${js.replaceAll('</script','<\\/script')}</script></body></html>`;
+await fs.writeFile(path.join(root,'atelier-demo.html'),html);
+console.log(`Standalone HTML: ${(Buffer.byteLength(html)/1024/1024).toFixed(2)} MiB`);
